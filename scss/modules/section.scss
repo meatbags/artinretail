@@ -1,6 +1,13 @@
 .section {
   min-height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .section__inner {
+    width: 100%;
+    min-height: 100vh;
+  }
 
   .section__background-image {
     position: absolute;

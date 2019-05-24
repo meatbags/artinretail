@@ -23,6 +23,13 @@ class Menu {
         this.closeMenu();
       });
     });
+
+    // close menu on scroll
+    window.addEventListener('scroll', () => {
+      if (this.el.menu.classList.contains('active')) {
+        this.closeMenu();
+      }
+    });
   }
 
   openMenu() {

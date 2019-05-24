@@ -7,6 +7,7 @@
     $title = $section['title'];
     $desc = $section['description'];
     $id = $id_prefix . str_replace(' ', '', $title);
+    $text = $section['text'];
     $type = $section['section_type'];
     $logos = $section['logos'];
     ?>
@@ -24,6 +25,13 @@
             </div>
           </div>
         <?php endif; ?>
+        <?php if ($text): ?>
+          <div class='text-block'>
+            <div class='text-block__inner parallax'>
+              <?php echo $text; ?>
+            </div>
+          </div>
+        <?php endif; ?>
         <div class='section__background-image'>
           <?php if ($section['background_image']): ?>
             <img src='<?php echo $section['background_image']; ?>' />
@@ -31,17 +39,14 @@
         </div>
       </div>
     </div>
-  <?php
-  endforeach;
-?>
+<?php endforeach; ?>
 
 <div id='menu-button-target' class='menu-button'>&times;</div>
 <div id='menu-target' class='menu'>
   <div class='menu__inner'>
     <?php foreach ($sections as $section):
-      $id = $id_prefix . str_replace(' ', '', $section['title']);
-      ?>
-      <?php if ($section['section_type'] != 'home'): ?>
+      if ($section['section_type'] != 'home'):
+        $id = $id_prefix . str_replace(' ', '', $section['title']); ?>
         <div class='menu__item'>
           <a href='#<?php echo $id; ?>'><?php echo $section['title']; ?></a>
         </div>

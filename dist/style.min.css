@@ -20,9 +20,9 @@ html, body {
 
 body {
   font-family: "OpenSans", sans-serif;
-  font-size: 18px;
-  letter-spacing: 1px;
-  line-height: 1.25;
+  font-size: 22px;
+  letter-spacing: 1.2px;
+  line-height: 1.5;
   color: #111; }
 
 a {
@@ -31,7 +31,12 @@ a {
 
 .section {
   min-height: 100vh;
-  position: relative; }
+  position: relative;
+  display: flex;
+  flex-direction: column; }
+  .section .section__inner {
+    width: 100%;
+    min-height: 100vh; }
   .section .section__background-image {
     position: absolute;
     top: 0;
@@ -86,7 +91,7 @@ a {
       padding-top: 16px;
       padding-bottom: 16px;
       font-family: "BalooThambi", sans-serif;
-      font-size: 28px; }
+      font-size: 32px; }
   .menu.active {
     opacity: 1;
     pointer-events: all; }
@@ -94,8 +99,8 @@ a {
       transform: scale(1); }
 
 .menu-button {
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
   padding-top: 8px;
   padding-bottom: 8px;
   position: fixed;
@@ -106,7 +111,7 @@ a {
   z-index: 101;
   transition: 0.4s;
   font-family: "BalooThambi", sans-serif;
-  font-size: 48px;
+  font-size: 52px;
   transform: rotate(45deg); }
   .menu-button.active {
     transform: rotate(0deg); }
@@ -118,6 +123,7 @@ a {
   padding-top: 40px;
   padding-bottom: 40px;
   font-family: "BalooThambi", sans-serif;
+  font-size: 32px;
   display: flex;
   justify-content: center; }
 
@@ -134,7 +140,7 @@ a {
   .logo-grid .logo-grid__title {
     width: 100%;
     color: #fff;
-    font-size: 28px;
+    font-size: 32px;
     font-family: "BalooThambi", sans-serif;
     text-align: center;
     padding-left: 0px;
@@ -142,7 +148,7 @@ a {
     padding-top: 16px;
     padding-bottom: 16px; }
   .logo-grid .logo-grid__inner {
-    width: 1000px;
+    width: 940px;
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap; }
@@ -165,15 +171,47 @@ a {
       .logo-grid .logo-grid__inner .logo-grid__logo.parallax.active {
         opacity: 1;
         transform: translateY(0); }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 940px) {
     .logo-grid .logo-grid__title {
       padding-left: 8px;
       padding-right: 8px;
       padding-top: 16px;
       padding-bottom: 16px;
-      font-size: 18px; }
+      font-size: 22px; }
     .logo-grid .logo-grid__inner {
       width: 100%; }
       .logo-grid .logo-grid__inner .logo-grid__logo img {
         width: 100%; } }
+
+.text-block {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff; }
+  .text-block .text-block__inner {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 940px; }
+    .text-block .text-block__inner p {
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-top: 32px;
+      margin-bottom: 32px; }
+      .text-block .text-block__inner p:nth-child(1) {
+        font-family: "BalooThambi", sans-serif;
+        font-size: 120%; }
+    .text-block .text-block__inner.parallax p {
+      transition: 0.4s;
+      opacity: 0; }
+      .text-block .text-block__inner.parallax p:nth-child(2n - 1) {
+        transform: translateX(40px); }
+      .text-block .text-block__inner.parallax p:nth-child(2n) {
+        transform: translateX(-40px); }
+    .text-block .text-block__inner.parallax.active p {
+      opacity: 1;
+      transform: translateX(0); }
 

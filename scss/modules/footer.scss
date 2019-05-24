@@ -3,6 +3,7 @@
   @include padding(1, 5);
   @extend .rotate-hue;
   font-family: $fontStackTitle;
+  font-size: $fontSizeLarge;
   display: flex;
   justify-content: center;
 }

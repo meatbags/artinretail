@@ -10,25 +10,30 @@ class Parallax {
     this.onScroll();
   }
 
-  onScroll() {
-    const top = (window.pageYOffset || document.documentElement.scrollTop) - (document.documentElement.clientTop || 0);
-    const bottom = top + window.innerHeight;
-
-    // apply parallax effects
-    let i = 1;
-    this.el.forEach(el => {
-      const rect = el.getBoundingClientRect();
-
-      if (rect.top > window.innerHeight) {
-        el.classList.remove('active');
-      } else if (!el.classList.contains('active')) {
+  parallax(el, i) {
+    // test parallax
+    const rect = el.getBoundingClientRect();
+    if (rect.top > window.innerHeight) {
+      el.classList.remove('active');
+    } else if (!el.classList.contains('active')) {
+      if (rect.top + rect.height < 0) {
+        el.classList.add('active');
+      } else {
         setTimeout(() => {
           const rect = el.getBoundingClientRect();
           if (rect.top <= window.innerHeight) {
             el.classList.add('active');
           }
-        }, i++ * this.cascade);
+        }, this.cascadeIndex++ * this.cascade);
       }
+    }
+  }
+
+  onScroll() {
+    // cascade parallax
+    this.cascadeIndex = 0;
+    this.el.forEach(el => {
+      this.parallax(el);
     });
   }
 }

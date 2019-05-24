@@ -1,0 +1,44 @@
+.text-block {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+
+  .text-block__inner {
+    @include padding(10, 1);
+    width: $siteWidth;
+
+    p {
+      @include margin(0, 4);
+
+      &:nth-child(1) {
+        font-family: $fontStackTitle;
+        font-size: 120%;
+      }
+    }
+
+    &.parallax {
+      p {
+        transition: $transition;
+        opacity: 0;
+
+        &:nth-child(2n - 1) {
+          transform: translateX(40px);
+        }
+
+        &:nth-child(2n) {
+          transform: translateX(-40px);
+        }
+      }
+    }
+
+    &.parallax.active {
+      p {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+}
