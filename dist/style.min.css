@@ -1,1 +1,179 @@
+@keyframes huerotate {
+  0% {
+    filter: hue-rotate(0deg); }
+  100% {
+    filter: hue-rotate(360deg); } }
+
+.rotate-hue, .section.section--home .section__background-image, .menu .menu__inner, .menu-button, .footer {
+  color: #5f976a;
+  animation-name: huerotate;
+  animation-duration: 6s;
+  animation-iteration-count: infinite; }
+
+div, * {
+  box-sizing: border-box;
+  outline: 1px solid rgba(0, 0, 0, 0.25); }
+
+html, body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "OpenSans", sans-serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  color: #111; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+.section {
+  min-height: 100vh;
+  position: relative; }
+  .section .section__background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    user-select: none;
+    z-index: -1; }
+    .section .section__background-image img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: left top; }
+  .section.section--home {
+    min-height: 92vh; }
+    .section.section--home .section__background-image {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .section.section--home .section__background-image img {
+        width: 70vw;
+        height: auto;
+        object-fit: contain; }
+  @media screen and (max-width: 500px) {
+    .section.section--home .section__background-image img {
+      width: 98vw; } }
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s; }
+  .menu .menu__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: scale(0.95);
+    transition: 0.4s; }
+    .menu .menu__inner .menu__item {
+      padding-left: 8px;
+      padding-right: 8px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      font-family: "BalooThambi", sans-serif;
+      font-size: 28px; }
+  .menu.active {
+    opacity: 1;
+    pointer-events: all; }
+    .menu.active .menu__inner {
+      transform: scale(1); }
+
+.menu-button {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  user-select: none;
+  cursor: pointer;
+  z-index: 101;
+  transition: 0.4s;
+  font-family: "BalooThambi", sans-serif;
+  font-size: 48px;
+  transform: rotate(45deg); }
+  .menu-button.active {
+    transform: rotate(0deg); }
+
+.footer {
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-family: "BalooThambi", sans-serif;
+  display: flex;
+  justify-content: center; }
+
+.logo-grid {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 24px;
+  padding-bottom: 24px; }
+  .logo-grid .logo-grid__title {
+    width: 100%;
+    color: #fff;
+    font-size: 28px;
+    font-family: "BalooThambi", sans-serif;
+    text-align: center;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 16px;
+    padding-bottom: 16px; }
+  .logo-grid .logo-grid__inner {
+    width: 1000px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap; }
+    .logo-grid .logo-grid__inner .logo-grid__logo {
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      width: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.4s; }
+      .logo-grid .logo-grid__inner .logo-grid__logo img {
+        width: 50%;
+        height: auto; }
+      .logo-grid .logo-grid__inner .logo-grid__logo.parallax {
+        opacity: 0;
+        transform: translateY(-40px); }
+      .logo-grid .logo-grid__inner .logo-grid__logo.parallax.active {
+        opacity: 1;
+        transform: translateY(0); }
+  @media screen and (max-width: 1000px) {
+    .logo-grid .logo-grid__title {
+      padding-left: 8px;
+      padding-right: 8px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      font-size: 18px; }
+    .logo-grid .logo-grid__inner {
+      width: 100%; }
+      .logo-grid .logo-grid__inner .logo-grid__logo img {
+        width: 100%; } }
 

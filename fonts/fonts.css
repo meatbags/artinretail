@@ -1,20 +1,20 @@
 @font-face {
   font-family: OpenSans-Semibold;
-  src: url('fonts/Open_Sans/OpenSans-Semibold.ttf');
+  src: url('Open_Sans/OpenSans-Semibold.ttf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: OpenSans;
-  src: url('fonts/Open_Sans/OpenSans-Regular.ttf');
+  src: url('Open_Sans/OpenSans-Regular.ttf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: BalooThambi;
-  src: url('fonts/BalooThambi/BalooThambi-Regular.ttf');
+  src: url('BalooThambi/BalooThambi-Regular.ttf');
   font-weight: normal;
   font-style: normal;
 }

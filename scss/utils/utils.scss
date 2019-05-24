@@ -1,0 +1,18 @@
+@mixin padding($x, $y) {
+  padding-left: $x * $space;
+  padding-right: $x * $space;
+  padding-top: $y * $space;
+  padding-bottom: $y * $space;
+}
+
+@keyframes huerotate {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+.rotate-hue {
+  color: $colourSpecial;
+  animation-name: huerotate;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}

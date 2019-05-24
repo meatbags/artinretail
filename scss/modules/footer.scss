@@ -1,0 +1,8 @@
+.footer {
+  width: 100%;
+  @include padding(1, 5);
+  @extend .rotate-hue;
+  font-family: $fontStackTitle;
+  display: flex;
+  justify-content: center;
+}
