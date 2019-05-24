@@ -1,0 +1,84 @@
+/* ----
+    Tag:
+        <link rel="stylesheet" href="fonts/fonts.css">
+    
+    Fonts:
+        robotolight
+        robotothinitalic
+        robotothin
+        robotomedium
+        bebasregular
+        museo300
+----- */
+
+@font-face {
+    font-family: robotolight;
+    src: url('../fonts/robotolight/roboto-light-webfont.eot');
+    src: url('../fonts/robotolight/roboto-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/robotolight/roboto-light-webfont.woff2') format('woff2'),
+         url('../fonts/robotolight/roboto-light-webfont.woff') format('woff'),
+         url('../fonts/robotolight/roboto-light-webfont.ttf') format('truetype'),
+         url('../fonts/robotolight/roboto-light-webfont.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: robotothinitalic;
+    src: url('../fonts/robotothinitalic/roboto-thinitalic-webfont.eot');
+    src: url('../fonts/robotothinitalic/roboto-thinitalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/robotothinitalic/roboto-thinitalic-webfont.woff2') format('woff2'),
+         url('../fonts/robotothinitalic/roboto-thinitalic-webfont.woff') format('woff'),
+         url('../fonts/robotothinitalic/roboto-thinitalic-webfont.ttf') format('truetype'),
+         url('../fonts/robotothinitalic/roboto-thinitalic-webfont.svg#robotothinitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: robotothin;
+    src: url('../fonts/robotothin/roboto-thin-webfont.eot');
+    src: url('../fonts/robotothin/roboto-thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/robotothin/roboto-thin-webfont.woff2') format('woff2'),
+         url('../fonts/robotothin/roboto-thin-webfont.woff') format('woff'),
+         url('../fonts/robotothin/roboto-thin-webfont.ttf') format('truetype'),
+         url('../fonts/robotothin/roboto-thin-webfont.svg#robotothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: robotomedium;
+    src: url('../fonts/robotomedium/roboto-medium-webfont.eot');
+    src: url('../fonts/robotomedium/roboto-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/robotomedium/roboto-medium-webfont.woff2') format('woff2'),
+         url('../fonts/robotomedium/roboto-medium-webfont.woff') format('woff'),
+         url('../fonts/robotomedium/roboto-medium-webfont.ttf') format('truetype'),
+         url('../fonts/robotomedium/roboto-medium-webfont.svg#robotomedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: bebasregular;
+    src: url('../fonts/bebasregular/BEBAS___-webfont.eot');
+    src: url('../fonts/bebasregular/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebasregular/BEBAS___-webfont.woff') format('woff'),
+         url('../fonts/bebasregular/BEBAS___-webfont.ttf') format('truetype'),
+         url('../fonts/bebasregular/BEBAS___-webfont.svg#bebasregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: museo300;
+    src: url('../fonts/museo300/Museo300-Regular-webfont.eot');
+    src: url('../fonts/museo300/Museo300-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/museo300/Museo300-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/museo300/Museo300-Regular-webfont.woff') format('woff'),
+         url('../fonts/museo300/Museo300-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/museo300/Museo300-Regular-webfont.svg#museo300') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
