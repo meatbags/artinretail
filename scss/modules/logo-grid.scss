@@ -11,6 +11,7 @@
     color: $white;
     font-size: $fontSizeLarge;
     font-family: $fontStackTitle;
+    text-shadow: $textShadow;
     text-align: center;
     @include padding(0, 2);
   }
@@ -59,6 +60,40 @@
         img {
           width: 100%;
         }
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    @include padding(0, 6);
+
+    .logo-grid__title {
+      @include padding(6, 1);
+      text-align: left;
+    }
+
+    .logo-grid__inner {
+      @include padding(3, 0);
+
+      .logo-grid__logo {
+        @include padding(4, 4);
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    @include padding(0, 4);
+
+    .logo-grid__title {
+      @include padding(2, 1);
+      text-align: left;
+    }
+
+    .logo-grid__inner {
+      @include padding(0, 0);
+
+      .logo-grid__logo {
+        @include padding(2, 1);
       }
     }
   }

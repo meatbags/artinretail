@@ -2,12 +2,13 @@
 
 import Parallax from './modules/parallax';
 import Menu from './modules/menu';
+import Article from './modules/article';
 
 class App {
   constructor() {
     this.parallax = new Parallax();
     this.menu = new Menu();
-    console.log(this);
+    this.article = new Article();
   }
 }
 

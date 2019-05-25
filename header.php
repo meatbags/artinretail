@@ -12,6 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <link rel='stylesheet' href='<?php echo get_template_directory_uri(); ?>/fonts/fonts.css'>
 	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico">
+	<!--<script type='text/javascript' src='<?php echo get_template_directory_uri(); ?>/dist/app.min.js'></script>-->
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

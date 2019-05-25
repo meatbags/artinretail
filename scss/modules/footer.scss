@@ -6,4 +6,8 @@
   font-size: $fontSizeLarge;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: $mobile) {
+    font-size: $fontSizeLargeMobile;  
+  }
 }

@@ -1,0 +1,6 @@
+.custom-acf-wrapper .acf-table {
+  border-spacing: 0px 1px;
+  border-left: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  background: #aaa;
+}

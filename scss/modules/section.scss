@@ -30,6 +30,10 @@
   &.section--home {
     min-height: 92vh;
 
+    .section__inner {
+      min-height: 92vh;
+    }
+
     .section__background-image {
       display: flex;
       justify-content: center;
@@ -48,7 +52,8 @@
     &.section--home {
       .section__background-image {
         img {
-          width: 98vw;
+          padding: $space * 2;
+          width: 100vw;
         }
       }
     }

@@ -27,4 +27,10 @@ function artinretail_load_scripts() {
 	wp_enqueue_style('artinretail_style' );
 	wp_enqueue_style('artinretail_fonts' );
 }
+
+function load_artinretail_wp_admin_style() {
+  wp_register_style('artinretail_wp_admin_css', get_template_directory_uri() . '/dist/admin-style.css', false, '1.0.0');
+  wp_enqueue_style('artinretail_wp_admin_css');
+}
+add_action( 'admin_enqueue_scripts', 'load_artinretail_wp_admin_style' );
 ?>

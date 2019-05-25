@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
   z-index: $indexMenu;
-  background: rgba($white, 0.7);
+  background: rgba($white, 0.8);
   opacity: 0;
   pointer-events: none;
   transition: $transition;
@@ -25,6 +25,7 @@
       @include padding(1, 2);
       font-family: $fontStackTitle;
       font-size: $fontSizeLarge;
+      text-shadow: $textShadow;
     }
   }
 
@@ -39,7 +40,7 @@
 }
 
 .menu-button {
-  @include padding(3, 1);
+  @include padding(3, 2);
   @extend .rotate-hue;
   position: fixed;
   top: 0;
@@ -50,9 +51,16 @@
   transition: $transition;
   font-family: $fontStackTitle;
   font-size: $fontSizeMenuButton;
+  text-shadow: $textShadow;
   transform: rotate(45deg);
+  line-height: 1;
 
   &.active {
+    text-shadow: $textShadowAlt;
     transform: rotate(0deg);
+  }
+
+  @media screen and (max-width: $mobile) {
+    @include padding(1, 0);
   }
 }

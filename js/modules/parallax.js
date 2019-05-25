@@ -13,7 +13,7 @@ class Parallax {
   parallax(el, i) {
     // test parallax
     const rect = el.getBoundingClientRect();
-    if (rect.top > window.innerHeight) {
+    if (rect.top >= window.innerHeight || rect.top + rect.height <= 0) {
       el.classList.remove('active');
     } else if (!el.classList.contains('active')) {
       if (rect.top + rect.height < 0) {

@@ -10,6 +10,7 @@
     $text = $section['text'];
     $type = $section['section_type'];
     $logos = $section['logos'];
+    $services = $section['services'];
     ?>
     <div id='<?php echo $id; ?>' class='section <?php if ($type == 'home'): ?>section--home<?php endif ?>'>
       <div class='section__inner'>
@@ -32,6 +33,23 @@
             </div>
           </div>
         <?php endif; ?>
+        <?php if ($services): ?>
+          <div class='services'>
+            <div class='services__inner'>
+              <div class='services__title'><?php echo $title; ?></div>
+              <?php foreach ($services as $service): ?>
+                <div class='service parallax' <?php if ($service['article']): ?>data-article='<?php echo str_replace(' ', '', $service['service_title']); ?>'<?php endif; ?>>
+                  <div class='service__title'>
+                    <?php echo $service['service_title']; ?>
+                  </div>
+                  <div class='service__description'>
+                    <?php echo $service['service_description']; ?>
+                  </div>
+                </div>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        <?php endif; ?>
         <div class='section__background-image'>
           <?php if ($section['background_image']): ?>
             <img src='<?php echo $section['background_image']; ?>' />
@@ -39,6 +57,22 @@
         </div>
       </div>
     </div>
+    <?php if ($services): ?>
+      <div class='articles'>
+        <?php foreach ($services as $service):
+          if ($service['article']): ?>
+            <div class='article__hint' data-article='<?php echo str_replace(' ', '', $service['service_title']); ?>'>
+              <div class='article__hint-inner'></div>
+            </div>
+            <div class='article' data-article='<?php echo str_replace(' ', '', $service['service_title']); ?>'>
+              <div class='article__inner'>
+                <?php echo $service['article']; ?>
+              </div>
+            </div>
+        <?php endif;
+          endforeach; ?>
+      </div>
+    <?php endif; ?>
 <?php endforeach; ?>
 
 <div id='menu-button-target' class='menu-button'>&times;</div>
